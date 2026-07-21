@@ -4,14 +4,13 @@ LID = int(input())
 N_PRICE = int(input())
 NUM = int(input())
 
-if LID > 0:
-    NUM_A = NUM - 1
-    NUM_B = NUM_A // LID
-    NUM_C = NUM_A - NUM_B
-    TOTAL = ((NUM_B * N_PRICE) + (NUM_C * PRICE)) + PRICE
-elif LID == 0 and N_PRICE > 0:
-    TOTAL = NUM * N_PRICE
-else:
+if not NUM:
+    TOTAL = 0
+elif not LID:
     TOTAL = NUM * PRICE
+else:
+    PRO = (NUM - 1) // LID
+    TOTAL = PRICE * (NUM - PRO) + (N_PRICE * PRO)
+
 
 print(TOTAL)

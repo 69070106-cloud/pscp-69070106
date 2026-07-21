@@ -1,15 +1,14 @@
 """CALCULATOR"""
 N = int(input())
-I = 1
-STR = "1"
-while True:
-    if I < N:
-        I += 1
-        STR += (f"+{I}")
-        if I == N:
-            STR += "="
-            break
-    elif N == 1:
-        break
+STR = 0
+for i in range(1, N+1):
+    if N == 1:
+        STR = 1
+    else:
+        STR += len(str(i))
+        if i != N:
+            STR += 1
+        elif i == N:
+            STR +=1
 
-print(len(STR))
+print(STR)
