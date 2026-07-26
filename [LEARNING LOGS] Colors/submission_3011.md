@@ -15,25 +15,25 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-
+OJ3011 - Colors
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
-
+545586
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+15-30 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +73,16 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
+โจทย์ให้ฉันอ่านสีสองสี แล้วตัดสินว่าผสมกันได้สี (Orange) หรือ (Violet) หรือ (Green)
 
+Input:
+รับชื่อสี ค่าเป็น str คือ COL1 , COL2
+
+Output:
+พิมพ์ชื่อสีที่ผสมได้ หากสีเดียวกันผสมกันจะได้สีนั้น หากมีสีอื่นที่ไม่ใช่แม่สีผสมจะพิมพ์ Error
+
+Constraints:
+input เป็น str สองตัวแปร ควรพิจารณากรณีที่สีทั้งสองตัวแปรเหมือนกัน และ สีสลับฝั่งกันเช่น แดง ฟ้า กับ ฟ้า แดง
 ```
 
 ---
@@ -93,9 +102,11 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+1).รับค่า  str สองตัวแปรคือ COL1, COL2
+2).ตรวจว่าหากสีแดง กับ เหลือง พิมพ์ Orange
+3).ตรวจหากเป็นสีแดง กับ ฟ้า พิมพ์ Violet
+4).ตรวจหากเป็นสีเหลือง กับ ฟ้า พิมพ์ Green
+5).นอกเหนือจากนั้นให้พิมพ์ Error
 ```
 
 ---
@@ -115,7 +126,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+ทำต่อจากแผนแรก แต่เพิ่มเงื่อนไขในสามเงื่อนไขแรกที่หากสีตามเงื่อนไขสลับกันเข้าไปด้วย และเพิ่มเงื่อนไขหากสีทั้งสองสีเหมือนกันก็ให้พิมพ์ออกเป็นสีนั้นด้วย
 ```
 
 ---
@@ -135,31 +146,32 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็คเงื่อนไขปกติ
 ```
 
 Input:
 
 ```text
-
+Red
+Yellow
 ```
 
 Expected output:
 
 ```text
-
+Orange
 ```
 
 Actual output:
 
 ```text
-
+Orange
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +179,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็คกรณีเขียนสลับกัน
 ```
 
 Input:
 
 ```text
-
+Yellow
+Red
 ```
 
 Expected output:
 
 ```text
-
+Orange
 ```
 
 Actual output:
 
 ```text
-
+Orange
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +212,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เพื่อเช็คกรณีทั้งสองสีมีสีเหมือนกัน
 ```
 
 Input:
 
 ```text
-
+Red
+Red
 ```
 
 Expected output:
 
 ```text
-
+Red
 ```
 
 Actual output:
 
 ```text
-
+Red
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +247,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +265,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+Yes
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -276,19 +290,19 @@ Yes / No
 ใครช่วยคุณ
 
 ```text
-
+เพื่อนร่วมชั้นหนึ่งคน
 ```
 
 เขาช่วยอะไร
 
 ```text
-
+แนะนำว่าเทสเคสอาจสลับกันและมีสีเดียวกันได้่
 ```
 
 คุณยังทำอะไรด้วยตนเอง
 
 ```text
-
+ฉันลองเพิ่มเงื่อนไขโดยใช้ or ในเงื่อนไขเดิม และเพิ่มเงื่อนไขที่ทั้งสองสีเหมือนกัน
 ```
 
 คุณคัดลอก code จากคนอื่นหรือไม่
@@ -305,10 +319,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |

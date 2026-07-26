@@ -15,25 +15,26 @@
 หมายเลข/ชื่อโจทย์ OJ:
 
 ```text
-
+OJ3025 - Season
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
 ```text
+564004	
 
 ```
 
 สถานะ OJ:
 
 ```text
-Pass / Not Pass / Not Submit
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
 ```text
-
+15-30 minutes
 ```
 
 เลือกหนึ่งข้อ:
@@ -73,7 +74,15 @@ More than 4 weeks
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
 ```text
+โจทย์ให้ฉันอ่านจำนวนเต็มสองตัว คือ MONTH, DAY แล้วตัดสินว่าอยู่ฤดูกาลไหน
+Input:
+โปรแกรมรับจำนวนเต็มสองค่าคือ MONTH, DAY
 
+Output:
+โปรแกรมควรพิมพ์ฤดูกาล ตามเงื่อนไขที่กำหนด
+
+Constraints:
+input เป็นจำนวนเต็มสองตัว ควรพิจารณาเดือนที่หารสามลงตัว และตั้งแต่วันที่ ยี่สิบเอ็ด
 ```
 
 ---
@@ -93,9 +102,17 @@ More than 4 weeks
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
 ```text
-Step 1:
-Step 2:
-Step 3:
+1).อ่านจำนวนเต็มสองตัว เดือน คือ MONTH วัน คือ DAY
+2).ตวรจว่า MONTH เป็น  1, 2, 3 ไหม พิมพ์ winter
+3).สร้างเงื่อนไขถ้า MONTH เป็น 3 และ DAY  มากกว่า 21 พิมพ์ spring
+4).ตวรจว่า MONTH เป็น  4, 5, 6 ไหม พิมพ์ spring
+5).สร้างเงื่อนไขถ้า MONTH เป็น 6 และ DAY  มากกว่า 21 พิมพ์ summer 
+6).ตวรจว่า MONTH เป็น  7, 8, 9 ไหม พิมพ์ summer
+7).สร้างเงื่อนไขถ้า MONTH เป็น 9 และ DAY  มากกว่า 21 พิมพ์ fall
+8).ตวรจว่า MONTH เป็น  10, 11, 12 ไหม พิมพ์ fall
+9).สร้างเงื่อนไขถ้า MONTH เป็น 12 และ DAY  มากกว่า 21 พิมพ์ winter
+
+
 ```
 
 ---
@@ -115,7 +132,7 @@ Step 3:
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
 ```text
-
+ใช้แผนแรก แต่ตอนเขียนรอบแรกเผลอใช้ == 
 ```
 
 ---
@@ -135,31 +152,32 @@ Step 3:
 ทำไมเลือก case นี้:
 
 ```text
-
+เช็ตเงื่อนไขปกติของเดือน 1, 2, 3
 ```
 
 Input:
 
 ```text
-
+1
+20
 ```
 
 Expected output:
 
 ```text
-
+winter
 ```
 
 Actual output:
 
 ```text
-
+winter
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 2
@@ -167,31 +185,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เช็ตเงื่อนไขหาร 3 ลงตัวและวันมากกว่า 21
 ```
 
 Input:
 
 ```text
-
+3
+21
 ```
 
 Expected output:
 
 ```text
-
+spring
 ```
 
 Actual output:
 
 ```text
-
+spring
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ### Test Case 3
@@ -199,31 +218,32 @@ Pass / Not Pass
 ทำไมเลือก case นี้:
 
 ```text
-
+เช็ตเงื่อนไขหาร 3 ลงตัวและวันมากกว่า 21
 ```
 
 Input:
 
 ```text
-
+12
+22
 ```
 
 Expected output:
 
 ```text
-
+winter
 ```
 
 Actual output:
 
 ```text
-
+winter
 ```
 
 Result:
 
 ```text
-Pass / Not Pass
+Pass
 ```
 
 ---
@@ -233,7 +253,7 @@ Pass / Not Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -251,7 +271,7 @@ ai_reflection.md
 ได้ถามเพื่อน TA ผู้สอน หรือบุคคลอื่นเพื่อขอความช่วยเหลือในโจทย์นี้หรือไม่
 
 ```text
-Yes / No
+No
 ```
 
 ถ้าใช่ ให้อธิบายสั้น ๆ ว่าได้รับความช่วยเหลือแบบใด
@@ -305,10 +325,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. | |
-| I understand my final code. | |
-| I recorded the real OJ status. | |
-| I did not copy AI-generated text directly into this file. | |
-| I did not copy code from another person. | |
-| If I received human help, I disclosed it in this file. | |
-| I submitted the final code to the OJ by myself. | |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |
