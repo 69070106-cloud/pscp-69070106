@@ -5,7 +5,7 @@ NUM3 = int(input())
 
 if NUM1 == NUM2 == NUM3:
     print("all the same")
-elif NUM1 != NUM2 != NUM3:
+elif NUM1 != NUM2 != NUM3 and NUM1 != NUM3 != NUM2:
     print("all different")
 else:
     print("neither")
